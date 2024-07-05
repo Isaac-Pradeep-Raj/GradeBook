@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Book DApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button {
+            margin: 5px 0;
+            padding: 10px;
+            width: 100%;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .form-container {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grade Book DApp</h1>
+    <div class="form-container">
+        <h2>Add Grade</h2>
+        <input type="text" id="studentName" placeholder="Student Name" />
+        <input type="text" id="subject" placeholder="Subject" />
+        <input type="number" id="grade" placeholder="Grade" />
+        <button onclick="addGrade()">Add Grade</button>
+    </div>
+    <div class="form-container">
+        <h2>Update Grade</h2>
+        <input type="text" id="studentNameUpdate" placeholder="Student Name" />
+        <input type="text" id="subjectUpdate" placeholder="Subject" />
+        <input type="number" id="gradeUpdate" placeholder="Grade" />
+        <button onclick="updateGrade()">Update Grade</button>
+    </div>
+    <div class="form-container">
+        <h2>Get Grade</h2>
+        <input type="text" id="studentNameGet" placeholder="Student Name" />
+        <input type="text" id="subjectGet" placeholder="Subject" />
+        <button onclick="getGrade()">Get Grade</button>
+        <p id="gradeResult"></p>
+    </div>
+    <div class="form-container">
+        <h2>Average Grade</h2>
+        <input type="text" id="subjectAverage" placeholder="Subject" />
+        <button onclick="averageGrade()">Get Average Grade</button>
+        <p id="averageResult"></p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/ethers/dist/ethers.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
